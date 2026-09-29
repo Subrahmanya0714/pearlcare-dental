@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Treatments() {
   const treatments = [
     {
@@ -52,7 +54,6 @@ export default function Treatments() {
 
   return (
     <section className="treatments-section" id="treatments">
-
       <div className="container">
 
         {/* Section Heading */}
@@ -60,20 +61,26 @@ export default function Treatments() {
         <div className="treatments-heading">
 
           <div>
-            <span className="section-label">
-              OUR TREATMENTS
-            </span>
+            <Reveal>
+              <span className="section-label">
+                OUR TREATMENTS
+              </span>
+            </Reveal>
 
-            <h2>
-              Complete care for
-              <span>every smile.</span>
-            </h2>
+            <Reveal delay={0.1}>
+              <h2>
+                Complete care for
+                <span>every smile.</span>
+              </h2>
+            </Reveal>
           </div>
 
-          <p>
-            From preventive care to advanced dental treatments,
-            our services are designed around your individual needs.
-          </p>
+          <Reveal delay={0.2}>
+            <p>
+              From preventive care to advanced dental treatments,
+              our services are designed around your individual needs.
+            </p>
+          </Reveal>
 
         </div>
 
@@ -83,37 +90,36 @@ export default function Treatments() {
         <div className="treatments-grid">
 
           {treatments.map((treatment, index) => (
+            <div className="treatment-card" key={index}>
 
-            <div
-              className="treatment-card"
-              key={index}
-            >
+              <Reveal delay={index * 0.08}>
 
-              <div className="treatment-icon">
-                {treatment.icon}
-              </div>
+                <div className="treatment-icon">
+                  {treatment.icon}
+                </div>
 
-              <div className="treatment-number">
-                0{index + 1}
-              </div>
+                <div className="treatment-number">
+                  0{index + 1}
+                </div>
 
-              <h3>
-                {treatment.title}
-              </h3>
+                <h3>
+                  {treatment.title}
+                </h3>
 
-              <p>
-                {treatment.description}
-              </p>
+                <p>
+                  {treatment.description}
+                </p>
 
-              <a
-                href="#appointment"
-                className="treatment-link"
-              >
-                Learn More →
-              </a>
+                <a
+                  href="#appointment"
+                  className="treatment-link"
+                >
+                  Learn More →
+                </a>
+
+              </Reveal>
 
             </div>
-
           ))}
 
         </div>
@@ -121,31 +127,32 @@ export default function Treatments() {
 
         {/* Bottom CTA */}
 
-        <div className="treatments-cta">
+        <Reveal delay={0.15}>
+          <div className="treatments-cta">
 
-          <div>
-            <span className="section-label">
-              NEED HELP?
-            </span>
+            <div>
+              <span className="section-label">
+                NEED HELP?
+              </span>
 
-            <h3>
-              Not sure which treatment
-              is right for you?
-            </h3>
+              <h3>
+                Not sure which treatment
+                is right for you?
+              </h3>
+            </div>
+
+            <a
+              href="#appointment"
+              className="primary-button"
+            >
+              Talk to Our Team
+              <span>→</span>
+            </a>
+
           </div>
-
-          <a
-            href="#appointment"
-            className="primary-button"
-          >
-            Talk to Our Team
-            <span>→</span>
-          </a>
-
-        </div>
+        </Reveal>
 
       </div>
-
     </section>
   );
 }

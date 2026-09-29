@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Reveal from "./Reveal";
 
 export default function Gallery() {
   const galleryItems = [
@@ -28,28 +29,29 @@ export default function Gallery() {
             SECTION HEADING
         ========================= */}
 
-        <div className="gallery-heading">
+        <Reveal>
+          <div className="gallery-heading">
 
-          <div>
+            <div>
 
-            <span className="section-label">
-              OUR CLINIC
-            </span>
+              <span className="section-label">
+                OUR CLINIC
+              </span>
 
-            <h2>
-              A space designed
-              <span>for your comfort.</span>
-            </h2>
+              <h2>
+                A space designed
+                <span>for your comfort.</span>
+              </h2>
+
+            </div>
+
+            <p>
+              Take a look at the environment and care experience
+              we aim to create for every patient.
+            </p>
 
           </div>
-
-
-          <p>
-            Take a look at the environment and care experience
-            we aim to create for every patient.
-          </p>
-
-        </div>
+        </Reveal>
 
 
         {/* =========================
@@ -60,9 +62,10 @@ export default function Gallery() {
 
           {galleryItems.map((item, index) => (
 
-            <div
-              className={`gallery-card gallery-card-${index + 1}`}
+            <Reveal
               key={index}
+              delay={index * 0.12}
+              className={`gallery-card gallery-card-${index + 1}`}
             >
 
               {/* Image */}
@@ -91,14 +94,13 @@ export default function Gallery() {
 
                 </div>
 
-
                 <span className="gallery-arrow">
                   ↗
                 </span>
 
               </div>
 
-            </div>
+            </Reveal>
 
           ))}
 
@@ -109,30 +111,31 @@ export default function Gallery() {
             BOTTOM CTA
         ========================= */}
 
-        <div className="gallery-bottom">
+        <Reveal delay={0.15}>
+          <div className="gallery-bottom">
 
-          <div>
+            <div>
 
-            <span className="section-label">
-              YOUR SMILE JOURNEY
-            </span>
+              <span className="section-label">
+                YOUR SMILE JOURNEY
+              </span>
 
-            <h3>
-              Ready to take the next step?
-            </h3>
+              <h3>
+                Ready to take the next step?
+              </h3>
+
+            </div>
+
+            <a
+              href="#appointment"
+              className="primary-button"
+            >
+              Book an Appointment
+              <span>→</span>
+            </a>
 
           </div>
-
-
-          <a
-            href="#appointment"
-            className="primary-button"
-          >
-            Book an Appointment
-            <span>→</span>
-          </a>
-
-        </div>
+        </Reveal>
 
       </div>
 

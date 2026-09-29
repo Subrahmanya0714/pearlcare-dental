@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Contact() {
   const whatsappNumber = "916363339707";
 
@@ -17,26 +19,28 @@ export default function Contact() {
 
         {/* Contact Heading */}
 
-        <div className="contact-heading">
+        <Reveal>
+          <div className="contact-heading">
 
-          <div>
-            <span className="section-label">
-              VISIT OUR CLINIC
-            </span>
+            <div>
+              <span className="section-label">
+                VISIT OUR CLINIC
+              </span>
 
-            <h2>
-              We're here for
-              <span>your smile.</span>
-            </h2>
+              <h2>
+                We're here for
+                <span>your smile.</span>
+              </h2>
+            </div>
+
+            <p>
+              Have a question, need a consultation or want to
+              schedule a visit? Reach out to our team and we'll
+              be happy to help.
+            </p>
+
           </div>
-
-          <p>
-            Have a question, need a consultation or want to
-            schedule a visit? Reach out to our team and we'll
-            be happy to help.
-          </p>
-
-        </div>
+        </Reveal>
 
 
         {/* Contact Content */}
@@ -45,7 +49,7 @@ export default function Contact() {
 
           {/* Contact Information */}
 
-          <div className="contact-info">
+          <Reveal className="contact-info">
 
             {/* Phone */}
 
@@ -124,12 +128,15 @@ export default function Contact() {
 
             </div>
 
-          </div>
+          </Reveal>
 
 
           {/* Map / Clinic Details */}
 
-          <div className="contact-map-card">
+          <Reveal
+            delay={0.12}
+            className="contact-map-card"
+          >
 
             <div className="map-placeholder">
 
@@ -178,50 +185,52 @@ export default function Contact() {
 
             </div>
 
-          </div>
+          </Reveal>
 
         </div>
 
 
         {/* Bottom CTA */}
 
-        <div className="contact-cta">
+        <Reveal delay={0.15}>
+          <div className="contact-cta">
 
-          <div>
+            <div>
 
-            <span className="section-label">
-              NEED AN APPOINTMENT?
-            </span>
+              <span className="section-label">
+                NEED AN APPOINTMENT?
+              </span>
 
-            <h3>
-              Let's take the next step toward
-              a healthier smile.
-            </h3>
+              <h3>
+                Let's take the next step toward
+                a healthier smile.
+              </h3>
+
+            </div>
+
+            <div className="contact-cta-buttons">
+
+              <a
+                href="tel:+916363339707"
+                className="secondary-button"
+              >
+                Call Now
+              </a>
+
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="primary-button"
+              >
+                WhatsApp Us
+                <span>↗</span>
+              </a>
+
+            </div>
 
           </div>
-
-          <div className="contact-cta-buttons">
-
-            <a
-              href="tel:+916363339707"
-              className="secondary-button"
-            >
-              Call Now
-            </a>
-
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="primary-button"
-            >
-              WhatsApp Us
-              <span>↗</span>
-            </a>
-
-          </div>
-
-        </div>
+        </Reveal>
 
       </div>
 

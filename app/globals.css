@@ -3393,3 +3393,532 @@ img {
   }
 
 }
+
+/* =========================================================
+   PEARLCARE - CLEAN PREMIUM TRANSITIONS
+========================================================= */
+
+/* Smooth anchor scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* =========================================================
+   GLOBAL INTERACTION TRANSITIONS
+========================================================= */
+
+a,
+button,
+input,
+select,
+textarea {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+
+/* =========================================================
+   BUTTON HOVER
+========================================================= */
+
+.primary-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(11, 114, 133, 0.20);
+}
+
+.secondary-button:hover {
+  transform: translateY(-3px);
+  background: #e7f6f8;
+}
+
+.primary-button:active,
+.secondary-button:active {
+  transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAVBAR LINKS
+========================================================= */
+
+.nav-links a {
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 0;
+  height: 2px;
+  background: #0b7285;
+  border-radius: 10px;
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover {
+  color: #0b7285;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.image-card {
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.image-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(16, 42, 67, 0.12);
+}
+
+.image-card img {
+  transition: transform 0.7s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.04);
+}
+
+
+/* =========================================================
+   HERO FLOATING CARD
+========================================================= */
+
+.experience-card {
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(16, 42, 67, 0.15);
+}
+
+@keyframes gentleFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+
+/* =========================================================
+   TRUST CARDS
+========================================================= */
+
+.trust-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.trust-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(16, 42, 67, 0.09);
+  border-color: #c9e6ea;
+}
+
+
+/* =========================================================
+   TREATMENT CARDS
+========================================================= */
+
+.treatment-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.treatment-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(16, 42, 67, 0.10);
+  border-color: #c9e6ea;
+}
+
+
+/* =========================================================
+   DOCTOR IMAGE
+========================================================= */
+
+.doctor-image {
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.doctor-image:hover {
+  transform: translateY(-5px);
+}
+
+
+/* =========================================================
+   GALLERY
+========================================================= */
+
+.gallery-card {
+  overflow: hidden;
+}
+
+.gallery-card img {
+  transition:
+    transform 0.6s ease,
+    filter 0.4s ease;
+}
+
+.gallery-card:hover img {
+  transform: scale(1.06);
+}
+
+
+/* =========================================================
+   REVIEW CARDS
+========================================================= */
+
+.review-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(16, 42, 67, 0.09);
+}
+
+
+/* =========================================================
+   CONTACT CARDS
+========================================================= */
+
+.contact-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(16, 42, 67, 0.09);
+}
+
+
+/* =========================================================
+   APPOINTMENT OPTIONS
+========================================================= */
+
+.appointment-option {
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.appointment-option:hover {
+  transform: translateX(5px);
+  border-color: #c9e6ea;
+  box-shadow: 0 10px 25px rgba(16, 42, 67, 0.05);
+}
+
+
+/* =========================================================
+   FORM FOCUS
+========================================================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: #0b7285;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(11, 114, 133, 0.08);
+}
+
+
+/* =========================================================
+   FOOTER LINKS
+========================================================= */
+
+.footer-column > a,
+.footer-bottom-links a,
+.footer-contact > a {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-column > a:hover {
+  color: #8bd3dc;
+  transform: translateX(3px);
+}
+
+.footer-bottom-links a:hover,
+.footer-contact > a:hover {
+  color: #8bd3dc;
+}
+
+
+/* =========================================================
+   SCROLL REVEAL
+   Used by components/Reveal.js
+========================================================= */
+
+.scroll-reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  filter: blur(5px);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease,
+    filter 0.8s ease;
+
+  will-change: opacity, transform, filter;
+}
+
+/* Reveal.js uses .show */
+.scroll-reveal.show,
+.scroll-reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+
+/* =========================================================
+   OPTIONAL REVEAL DELAYS
+========================================================= */
+
+.scroll-reveal.delay-1 {
+  transition-delay: 0.1s;
+}
+
+.scroll-reveal.delay-2 {
+  transition-delay: 0.2s;
+}
+
+.scroll-reveal.delay-3 {
+  transition-delay: 0.3s;
+}
+
+.scroll-reveal.delay-4 {
+  transition-delay: 0.4s;
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .scroll-reveal {
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}
+
+/* =========================================================
+   PEARLCARE HERO - REPEAT ON SCROLL
+========================================================= */
+
+/* HERO CONTENT - HIDDEN STATE */
+
+.hero-content > * {
+  opacity: 0;
+  transform: translateY(25px);
+  filter: blur(4px);
+}
+
+/* HERO IMAGE - HIDDEN STATE */
+
+.hero-image {
+  opacity: 0;
+  transform: translateX(35px);
+  filter: blur(4px);
+}
+
+/* EXPERIENCE CARD - HIDDEN STATE */
+
+.experience-card {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+
+/* =========================================================
+   HERO VISIBLE STATE
+========================================================= */
+
+.hero.hero-visible .hero-badge {
+  animation: heroReveal 0.8s ease 0.1s forwards;
+}
+
+.hero.hero-visible .hero-content h1 {
+  animation: heroReveal 0.8s ease 0.2s forwards;
+}
+
+.hero.hero-visible .hero-content > p {
+  animation: heroReveal 0.8s ease 0.35s forwards;
+}
+
+.hero.hero-visible .hero-buttons {
+  animation: heroReveal 0.8s ease 0.5s forwards;
+}
+
+.hero.hero-visible .hero-trust {
+  animation: heroReveal 0.8s ease 0.65s forwards;
+}
+
+
+/* HERO IMAGE */
+
+.hero.hero-visible .hero-image {
+  animation: heroImageReveal 1s ease 0.25s forwards;
+}
+
+
+/* FLOATING CARD */
+
+.hero.hero-visible .experience-card {
+  animation:
+    heroCardReveal 0.8s ease 0.75s forwards,
+    gentleFloat 4s ease-in-out 1.6s 1.55s infinite;
+}
+
+
+/* =========================================================
+   HERO ANIMATIONS
+========================================================= */
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+@keyframes heroImageReveal {
+  from {
+    opacity: 0;
+    transform: translateX(35px);
+    filter: blur(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+
+@keyframes heroCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   MOBILE HERO
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .hero-image {
+    transform: translateY(30px);
+  }
+
+  @keyframes heroImageReveal {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+      filter: blur(4px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-content > *,
+  .hero-image,
+  .experience-card {
+    opacity: 1;
+    transform: none;
+    filter: none;
+    animation: none !important;
+  }
+
+}

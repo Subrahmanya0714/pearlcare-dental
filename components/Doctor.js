@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Doctor() {
   return (
     <section className="doctor-section" id="doctor">
@@ -5,118 +7,111 @@ export default function Doctor() {
       <div className="container doctor-container">
 
         {/* Doctor Image */}
+        <Reveal>
+          <div className="doctor-image">
 
-        <div className="doctor-image">
+            <img
+              src="/images/dentist-doctor.jpg"
+              alt="Dr. Ananya Sharma"
+            />
 
-          <img
-            src="/images/dentist-doctor.jpg"
-            alt="Dr. Ananya Sharma"
-          />
+            <div className="doctor-experience-card">
+              <strong>Patient-Focused</strong>
+              <span>Dental Care</span>
+            </div>
 
-          <div className="doctor-experience-card">
-            <strong>Patient-Focused</strong>
-            <span>Dental Care</span>
           </div>
-
-        </div>
+        </Reveal>
 
 
         {/* Doctor Information */}
+        <Reveal delay={0.12}>
+          <div className="doctor-content">
 
-        <div className="doctor-content">
+            <span className="section-label">
+              MEET YOUR DENTIST
+            </span>
 
-          <span className="section-label">
-            MEET YOUR DENTIST
-          </span>
+            <h2>
+              Care from a dentist
+              <span>you can trust.</span>
+            </h2>
 
-          <h2>
-            Care from a dentist
-            <span>you can trust.</span>
-          </h2>
+            <h3>
+              Dr. Ananya Sharma
+            </h3>
 
-          <h3>
-            Dr. Ananya Sharma
-          </h3>
+            <p className="doctor-qualification">
+              BDS, MDS — Prosthodontics
+            </p>
 
-          <p className="doctor-qualification">
-            BDS, MDS — Prosthodontics
-          </p>
+            <p>
+              Dr. Ananya Sharma is dedicated to providing personalized
+              dental care in a comfortable and welcoming environment.
+            </p>
 
-          <p>
-            Dr. Ananya Sharma is dedicated to providing personalized
-            dental care in a comfortable and welcoming environment.
-          </p>
-
-          <p>
-            Her approach focuses on understanding each patient's
-            needs and explaining treatment options clearly before
-            beginning any procedure.
-          </p>
+            <p>
+              Her approach focuses on understanding each patient's
+              needs and explaining treatment options clearly before
+              beginning any procedure.
+            </p>
 
 
-          {/* Doctor Highlights */}
+            {/* Doctor Highlights */}
+            <div className="doctor-highlights">
 
-          <div className="doctor-highlights">
+              <div className="doctor-highlight">
+                <span>✓</span>
 
-            <div className="doctor-highlight">
+                <div>
+                  <strong>Patient First</strong>
+                  <small>Personalized treatment approach</small>
+                </div>
+              </div>
 
-              <span>✓</span>
 
-              <div>
-                <strong>Patient First</strong>
-                <small>Personalized treatment approach</small>
+              <div className="doctor-highlight">
+                <span>✓</span>
+
+                <div>
+                  <strong>Modern Care</strong>
+                  <small>Contemporary dental techniques</small>
+                </div>
+              </div>
+
+
+              <div className="doctor-highlight">
+                <span>✓</span>
+
+                <div>
+                  <strong>Clear Guidance</strong>
+                  <small>Easy-to-understand treatment plans</small>
+                </div>
+              </div>
+
+
+              <div className="doctor-highlight">
+                <span>✓</span>
+
+                <div>
+                  <strong>Comfort Focused</strong>
+                  <small>A calm and welcoming experience</small>
+                </div>
               </div>
 
             </div>
 
 
-            <div className="doctor-highlight">
-
-              <span>✓</span>
-
-              <div>
-                <strong>Modern Care</strong>
-                <small>Contemporary dental techniques</small>
-              </div>
-
-            </div>
-
-
-            <div className="doctor-highlight">
-
-              <span>✓</span>
-
-              <div>
-                <strong>Clear Guidance</strong>
-                <small>Easy-to-understand treatment plans</small>
-              </div>
-
-            </div>
-
-
-            <div className="doctor-highlight">
-
-              <span>✓</span>
-
-              <div>
-                <strong>Comfort Focused</strong>
-                <small>A calm and welcoming experience</small>
-              </div>
-
-            </div>
+            <a
+              href="#appointment"
+              className="primary-button doctor-button"
+            >
+              Book an Appointment
+              <span>→</span>
+            </a>
 
           </div>
-
-
-          <a
-            href="#appointment"
-            className="primary-button doctor-button"
-          >
-            Book an Appointment
-            <span>→</span>
-          </a>
-
-        </div>
+        </Reveal>
 
       </div>
 

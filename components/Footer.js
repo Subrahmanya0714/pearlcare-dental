@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Footer() {
   const whatsappNumber = "916363339707";
 
@@ -16,7 +18,7 @@ export default function Footer() {
 
           {/* Brand */}
 
-          <div className="footer-brand">
+          <Reveal className="footer-brand">
 
             <a href="#home" className="footer-logo">
 
@@ -64,12 +66,15 @@ export default function Footer() {
 
             </div>
 
-          </div>
+          </Reveal>
 
 
           {/* Quick Links */}
 
-          <div className="footer-column">
+          <Reveal
+            delay={0.08}
+            className="footer-column"
+          >
 
             <h3>Quick Links</h3>
 
@@ -81,12 +86,15 @@ export default function Footer() {
             <a href="#reviews">Reviews</a>
             <a href="#contact">Contact</a>
 
-          </div>
+          </Reveal>
 
 
           {/* Treatments */}
 
-          <div className="footer-column">
+          <Reveal
+            delay={0.16}
+            className="footer-column"
+          >
 
             <h3>Treatments</h3>
 
@@ -97,12 +105,15 @@ export default function Footer() {
             <a href="#treatments">Braces & Aligners</a>
             <a href="#treatments">Cosmetic Dentistry</a>
 
-          </div>
+          </Reveal>
 
 
           {/* Contact */}
 
-          <div className="footer-column footer-contact">
+          <Reveal
+            delay={0.24}
+            className="footer-column footer-contact"
+          >
 
             <h3>Contact</h3>
 
@@ -130,40 +141,42 @@ export default function Footer() {
               <span>↗</span>
             </a>
 
-          </div>
+          </Reveal>
 
         </div>
 
 
         {/* Footer Bottom */}
 
-        <div className="footer-bottom">
+        <Reveal delay={0.15}>
+          <div className="footer-bottom">
 
-          <p>
-            © 2026 PearlCare Dental Studio. All rights reserved.
-          </p>
+            <p>
+              © 2026 PearlCare Dental Studio. All rights reserved.
+            </p>
 
-          <div className="footer-bottom-links">
+            <div className="footer-bottom-links">
 
-            <a href="/privacy">
-              Privacy Policy
-            </a>
+              <a href="/privacy">
+                Privacy Policy
+              </a>
 
-            <a href="/terms">
-              Terms & Conditions
+              <a href="/terms">
+                Terms & Conditions
+              </a>
+
+            </div>
+
+            <a
+              href="#home"
+              className="back-to-top"
+              aria-label="Back to top"
+            >
+              ↑
             </a>
 
           </div>
-
-          <a
-            href="#home"
-            className="back-to-top"
-            aria-label="Back to top"
-          >
-            ↑
-          </a>
-
-        </div>
+        </Reveal>
 
       </div>
 

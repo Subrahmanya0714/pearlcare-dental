@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "./Reveal";
 
 export default function Appointment() {
   const [formData, setFormData] = useState({
@@ -98,7 +99,9 @@ export default function Appointment() {
               LEFT SIDE
           ========================================= */}
 
-          <div className="appointment-content">
+          <Reveal
+            className="appointment-content"
+          >
 
             <span className="section-label">
               BOOK YOUR VISIT
@@ -185,15 +188,17 @@ export default function Appointment() {
 
             </div>
 
-          </div>
+          </Reveal>
 
 
           {/* =========================================
               APPOINTMENT CARD
           ========================================= */}
 
-          <div className="appointment-form-card">
-
+          <Reveal
+            delay={0.12}
+            className="appointment-form-card"
+          >
 
             {/* Heading */}
 
@@ -409,7 +414,7 @@ export default function Appointment() {
               your appointment details.
             </small>
 
-          </div>
+          </Reveal>
 
         </div>
 

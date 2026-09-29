@@ -1,3 +1,5 @@
+import Reveal from "./Reveal";
+
 export default function Reviews() {
   const reviews = [
     {
@@ -24,32 +26,34 @@ export default function Reviews() {
 
         {/* Section Heading */}
 
-        <div className="reviews-heading">
+        <Reveal>
+          <div className="reviews-heading">
 
-          <div>
-            <span className="section-label">
-              PATIENT EXPERIENCES
-            </span>
+            <div>
+              <span className="section-label">
+                PATIENT EXPERIENCES
+              </span>
 
-            <h2>
-              Care that patients
-              <span>can feel good about.</span>
-            </h2>
-          </div>
-
-          <div className="reviews-rating">
-
-            <div className="stars">
-              ★★★★★
+              <h2>
+                Care that patients
+                <span>can feel good about.</span>
+              </h2>
             </div>
 
-            <p>
-              Sample testimonials for demonstration
-            </p>
+            <div className="reviews-rating">
+
+              <div className="stars">
+                ★★★★★
+              </div>
+
+              <p>
+                Sample testimonials for demonstration
+              </p>
+
+            </div>
 
           </div>
-
-        </div>
+        </Reveal>
 
 
         {/* Reviews */}
@@ -58,48 +62,50 @@ export default function Reviews() {
 
           {reviews.map((review, index) => (
 
-            <div
-              className="review-card"
+            <Reveal
               key={index}
+              delay={index * 0.12}
             >
+              <div className="review-card">
 
-              <div className="review-top">
+                <div className="review-top">
 
-                <div className="quote-mark">
-                  "
+                  <div className="quote-mark">
+                    "
+                  </div>
+
+                  <div className="review-stars">
+                    ★★★★★
+                  </div>
+
                 </div>
 
-                <div className="review-stars">
-                  ★★★★★
+
+                <p className="review-text">
+                  {review.text}
+                </p>
+
+
+                <div className="review-person">
+
+                  <div className="review-avatar">
+                    {review.name.charAt(0)}
+                  </div>
+
+                  <div>
+                    <strong>
+                      {review.name}
+                    </strong>
+
+                    <small>
+                      {review.treatment}
+                    </small>
+                  </div>
+
                 </div>
 
               </div>
-
-
-              <p className="review-text">
-                {review.text}
-              </p>
-
-
-              <div className="review-person">
-
-                <div className="review-avatar">
-                  {review.name.charAt(0)}
-                </div>
-
-                <div>
-                  <strong>
-                    {review.name}
-                  </strong>
-
-                  <small>
-                    {review.treatment}
-                  </small>
-                </div>
-
-              </div>
-
-            </div>
+            </Reveal>
 
           ))}
 
@@ -108,30 +114,32 @@ export default function Reviews() {
 
         {/* Trust CTA */}
 
-        <div className="reviews-cta">
+        <Reveal delay={0.15}>
+          <div className="reviews-cta">
 
-          <div className="reviews-cta-icon">
-            ✓
+            <div className="reviews-cta-icon">
+              ✓
+            </div>
+
+            <div>
+              <strong>
+                Your comfort comes first.
+              </strong>
+
+              <p>
+                Have questions about a treatment? Our team is here to help.
+              </p>
+            </div>
+
+            <a
+              href="#appointment"
+              className="secondary-button"
+            >
+              Talk to Us →
+            </a>
+
           </div>
-
-          <div>
-            <strong>
-              Your comfort comes first.
-            </strong>
-
-            <p>
-              Have questions about a treatment? Our team is here to help.
-            </p>
-          </div>
-
-          <a
-            href="#appointment"
-            className="secondary-button"
-          >
-            Talk to Us →
-          </a>
-
-        </div>
+        </Reveal>
 
       </div>
 
